@@ -1,0 +1,99 @@
+/* Style for left sidebar menu */
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 70px;
+    left: -200px; /* Hide sidebar by default */
+    background-color: #333;
+    padding-top: 20px;
+    color: white;
+    transition: left 0.3s ease; /* Add smooth transition effect */
+}
+
+.sidebar.active {
+    left: 0; /* Show sidebar when active class is added */
+}
+
+.sidebar a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #567;
+}
+
+/* Style for content area */
+.content {
+    margin-left: 200; /* Adjust based on sidebar width */
+    padding-top: 80px; /* Adjust based on header height */
+    padding-bottom: 20px; /* Add padding bottom to prevent content from sticking to footer */
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: margin-left 0.3s ease; /* Add smooth transition effect */
+}
+
+/* Style for header */
+.header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0; /* Adjust based on sidebar width */
+    width: 100%;
+    z-index: 1000; /* Ensure header stays above other content */
+}
+
+/* Style for footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0; /* Adjust based on sidebar width */
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Style for card */
+.card {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for production gauge container */
+#productionGaugeContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Style for toggle button */
+.toggle-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    z-index: 1100; /* Ensure button stays above sidebar */
+}
+/* Style for sidebar when collapsed */
+.sidebar.collapsed {
+    left: -200px; /* Adjust based on sidebar width */
+}
+
+/* Style for content area when sidebar is collapsed */
+.content.collapsed {
+    margin-left: 0;
+}

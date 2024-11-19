@@ -1,0 +1,103 @@
+/* Style for scroll buttons and hamburger button */
+#scrollTopBtn, #scrollBottomBtn, #hamburgerBtn, #addBtn {
+    position: fixed;
+    z-index: 99;
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: hsl(187, 50%, 75%);
+    color: darkorchid;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#scrollTopBtn{
+    right: 30px;
+    bottom: 20px;
+    display: none; /* ซ่อนปุ่มโดยเริ่มต้น */
+}
+
+#scrollBottomBtn {
+    right: 90px;
+    bottom: 20px;
+    display: none;
+}
+
+#addBtn {
+    right: 150px;
+    bottom: 20px;
+}
+
+#scrollTopBtn:hover, #scrollBottomBtn:hover, #hamburgerBtn:hover, #addBtn:hover {
+    background-color: hsl(0, 0%, 80%);
+}
+
+#hamburgerBtn {
+    top: 30px;
+    left: 10px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 240px;
+    position: fixed;
+    top: 20px;
+    left: -240px;
+    background-color: hsl(187, 50%, 75%);
+    color: darkorchid;
+    transition: left 0.3s ease;
+    z-index: 999;
+    padding-top: 50px;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: darkorchid;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: hsl(0, 0%, 80%);
+}
+
+.content {
+    margin-left: 0;
+    top: 50px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+    z-index: 998;
+}
+
+.content.active {
+    margin-left: 240px;
+}
+
+.header {
+    background-color: hsl(187, 50%, 75%);
+    color: darkorchid;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: fixed;
+    padding: 0;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    z-index: 990;
+    font-size: 20px;
+    height: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

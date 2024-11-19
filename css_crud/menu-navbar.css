@@ -1,0 +1,41 @@
+.icon-text {
+    display: flex;
+    align-items: center;
+    padding: 10px; /* ปรับค่า padding ตามต้องการ */
+    
+  }
+  
+  .icon-text i {
+    margin-right: 10px; /* ปรับค่า margin ตามต้องการ */
+    width: 30px;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(187, 50%, 75%);
+    color: darkorchid;
+    padding: 10px 20px;
+    z-index: 1005;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+}
+.navbar .nav-links a {
+    text-decoration: none;
+    color: darkorchid;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+.navbar .nav-links a i {
+    margin-right: 8px;
+}
+.navbar .nav-links a:hover {
+    color: #ffcc00;
+}
