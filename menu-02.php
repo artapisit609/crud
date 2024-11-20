@@ -13,13 +13,13 @@
 <body>
     <nav class="navbar">
         <div class="nav-links">
-            <a href="http://10.10.22.88/nav.html" class="menu-item"><i>TMY</i></a>
+            <a href="http://10.10.22.88/nav.html" class="menu-item">TMY</a>
             <a href="startpage"><i class="fas fa-home"></i>Home page</a>
             <a href="index"><i class="fas fa-bars"></i>รายชื่อพนักงาน</a>
             <a href="index_AT23"><i class="fas fa-history"></i>ประวัติการลางาน 2023</a>
             <a href="index_AT24"><i class="fas fa-history"></i>ประวัติการลางาน 2024</a>
             <a href="stat_atten"><i class="fas fa-list"></i>สถิติการลางาน</a>
-            <a href="http://10.10.22.88/Login/logout.php" class="menu-item" data-tooltip="Logout"><i class="fas fa-sign-out-alt"></i></a>
+            <a href="http://10.10.22.88/Login/logout.php" class="menu-item" data-tooltip="Logout"><i class="fas fa-sign-out-alt"></i>ออกจากระบบ</a>
         </div>
     </nav>
 
