@@ -21,6 +21,7 @@
     position: fixed;
     width: 100%;
     top: 0;
+    overflow-x: scroll;
 }
 .navbar .nav-links {
     display: flex;
