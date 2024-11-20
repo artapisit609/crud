@@ -19,6 +19,7 @@
             <a href="index_AT23"><i class="fas fa-history"></i>ประวัติการลางาน 2023</a>
             <a href="index_AT24"><i class="fas fa-history"></i>ประวัติการลางาน 2024</a>
             <a href="stat_atten"><i class="fas fa-list"></i>สถิติการลางาน</a>
+            <a href="http://10.10.22.88/Login/logout.php" class="menu-item" data-tooltip="Logout"><i class="fas fa-sign-out-alt"></i></a>
         </div>
     </nav>
 

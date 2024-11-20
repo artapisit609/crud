@@ -1,25 +1,41 @@
 <?php
+session_start();
+include "connect_d.php";
 header('Content-Type: application/json');
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'] ?? '';
+    $password = $_POST['password'] ?? '';
+    $passwordNotSet = $_POST['passwordNotSet'] ?? '0';
 
-$mysqli = new mysqli("localhost", "root", "1023-a10", "employee");
+    if (empty($username)) {
+        echo json_encode(['status' => 'error', 'message' => 'กรุณากรอกรหัสพนักงาน']);
+        exit;
+    }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $stmt = $conn->prepare("SELECT * FROM tbl_employee WHERE username = ?");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-    $query = $mysqli->prepare("SELECT * FROM tbl_employee WHERE username = ? AND password = ?");
-    $query->bind_param("ss", $username, $password);
-    $query->execute();
-    $result = $query->get_result();
+    if ($result->num_rows === 1) {
+        $user = $result->fetch_assoc();
 
-    if ($result->num_rows > 0) {
-        echo json_encode(['status' => 'success']);
+        if ($passwordNotSet === '1') {
+            echo json_encode(['status' => 'password_reset_required']);
+            exit;
+        }
+
+        if (password_verify($password, $user['password'])) {
+            $_SESSION['loggedin'] = true;
+            $_SESSION['username'] = $user['username'];
+            echo json_encode(['status' => 'success']);
+        } else {
+            echo json_encode(['status' => 'error', 'message' => 'รหัสผ่านไม่ถูกต้อง']);
+        }
     } else {
-        echo json_encode(['status' => 'error', 'message' => 'Invalid password']);
+        echo json_encode(['status' => 'error', 'message' => 'ไม่พบผู้ใช้งาน']);
     }
 } else {
-    echo json_encode(['status' => 'error', 'message' => 'Invalid request method']);
+    echo json_encode(['status' => 'error', 'message' => 'คำขอไม่ถูกต้อง']);
 }
-
-$mysqli->close();
 ?>

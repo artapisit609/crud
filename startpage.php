@@ -1,4 +1,5 @@
 <?php
+include "auth.php";
 require_once "connect_d.php";
 // สร้างการเชื่อมต่อ MySQLi
 $conn = new mysqli($servername, $username, $password, $database);
