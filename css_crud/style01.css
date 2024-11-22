@@ -4,7 +4,7 @@
     width: 200px;
     position: fixed;
     top: 70px;
-    left: -200px; /* Hide sidebar by default */
+    left: 0; /* Hide sidebar by default */
     background-color: #333;
     padding-top: 20px;
     color: white;

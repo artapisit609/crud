@@ -39,9 +39,9 @@ $result = mysqli_query($conn, $sql);
 
     <?php include "menu-02.php"; ?>
 
-    <div class="header">
+    <!-- <div class="header">
         <h3>ข้อมูลการลางาน 2023</h3>
-    </div>
+    </div> -->
 
     <div class="content" id="content">
 

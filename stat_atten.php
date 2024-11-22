@@ -115,16 +115,15 @@ $conn->close();
 </style>
 
 <body>
-
-    <canvas id="attendanceChart"></canvas>
-
     <?php include "menu-02.php"; ?>
+    
+    <canvas id="attendanceChart"></canvas>
     <!-- Content area -->
     <div class="content" id="content">
         <!-- Header -->
-        <div class="header">
+        <!-- <div class="header">
             <h3>เปรียบเทียบสถิติการลางาน 2023 - 2024</h3>
-        </div>
+        </div> -->
         <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
         <button onclick="scrollToBottom()" id="scrollBottomBtn" title="Go to bottom"><i
                 class="fas fa-arrow-down"></i></button>

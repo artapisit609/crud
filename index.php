@@ -10,11 +10,18 @@
     <title>Horizontal HR Systems</title>
 </head>
 
+<style>
+    .content {
+        margin-top: 20px;
+        z-index: 998;
+    }
+</style>
+
 <body>
     <?php include "menu-02.php"; ?>
-    <div class="header">
+    <!-- <div class="header">
         <h3>รายชื่อพนักงาน</h3>
-    </div>
+    </div> -->
 
     <div class="content" id="content">
         <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>

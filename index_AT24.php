@@ -21,9 +21,9 @@
     <!-- Sidebar menu -->
     <?php include "menu-02.php"; ?>
     <!-- Content area -->
-    <div class="header">
+    <!-- <div class="header">
         <h3>ข้อมูลการลางาน 2024</h3>
-    </div>
+    </div> -->
 
     <div class="content" id="content">
         <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>

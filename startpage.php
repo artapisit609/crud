@@ -32,6 +32,7 @@ $productionRate = (($totalEmployees - 4) / (20 * 2)) * 100;
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,6 +53,11 @@ $productionRate = (($totalEmployees - 4) / (20 * 2)) * 100;
             color: darkorchid;
             text-align: center;
         }
+
+        <style>.content {
+            margin-top: 20px;
+            z-index: 998;
+        }
     </style>
 </head>
 
@@ -60,27 +66,27 @@ $productionRate = (($totalEmployees - 4) / (20 * 2)) * 100;
     <!-- Content area -->
     <div class="content" id="content">
         <!-- Header -->
-        <div class="header">
+        <!-- <div class="header">
             <h3>Horizontal HR Systems</h3>
+        </div> -->
+        <div class="card">
+            <h4>อัตรากำลังการผลิตปัจจุบัน : <?php echo number_format($productionRate, 2); ?> %</h4>
         </div>
-            <div class="card">
-                <h4>อัตรากำลังการผลิตปัจจุบัน : <?php echo number_format($productionRate, 2); ?> %</h4>
-            </div>
-            <div class="card">
-                <h5>จำนวนเครื่องจักร : 20 เครื่อง</h5>
-            </div>
-            <div class="card">
-                <h5>จำนวนพนักงานทั้งหมด : <?php echo $totalEmployees - 4; ?> คน</h5>
-            </div>
-            <div class="card">
-                <h5>พนักงานชาย : <?php echo $maleEmployees - 4; ?> คน</h5>
-            </div>
-            <div class="card">
-                <h5>พนักงานหญิง : <?php echo $femaleEmployees; ?> คน</h5>
-            </div>
-            <div class="card">
-                <h5>จำนวนพนักงานที่ขาด : <?php echo max(0, (20 * 2) - ($totalEmployees - 4)); ?> คน</h5>
-            </div>
+        <div class="card">
+            <h5>จำนวนเครื่องจักร : 20 เครื่อง</h5>
+        </div>
+        <div class="card">
+            <h5>จำนวนพนักงานทั้งหมด : <?php echo $totalEmployees - 4; ?> คน</h5>
+        </div>
+        <div class="card">
+            <h5>พนักงานชาย : <?php echo $maleEmployees - 4; ?> คน</h5>
+        </div>
+        <div class="card">
+            <h5>พนักงานหญิง : <?php echo $femaleEmployees; ?> คน</h5>
+        </div>
+        <div class="card">
+            <h5>จำนวนพนักงานที่ขาด : <?php echo max(0, (20 * 2) - ($totalEmployees - 4)); ?> คน</h5>
+        </div>
     </div>
 </body>
 

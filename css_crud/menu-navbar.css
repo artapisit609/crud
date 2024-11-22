@@ -11,16 +11,16 @@
   }
 
   .navbar {
+    background-color: hsl(187, 50%, 75%);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: hsl(187, 50%, 75%);
     color: darkorchid;
-    padding: 10px 20px;
-    z-index: 1005;
+    padding: 10px;
     position: fixed;
-    width: 100%;
     top: 0;
+    z-index: 1005;
+    width: 100%;
     overflow-x: scroll;
 }
 .navbar .nav-links {

@@ -7,7 +7,7 @@
     <link href="css_crud/menu-02.css" rel="stylesheet">
     <link href="css_crud/menu-navbar.css" rel="stylesheet">
     <link href="fontawesome-free-6.5.2-web/css/all.min.css" rel="stylesheet">
-    <script src="js/up-down.js"></script>
+    <script src="js_crud/up-down.js"></script>
 </head>
 
 <body>
